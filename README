@@ -2,6 +2,8 @@
 
 This is the README file for the 'Blondie Address Book' written by Josh Stevens.
 
+By the way: the GUI hasn't been finished yet, in fact; I haven't started on the design of it yet!
+
 -- What is Blondie? --
 
 * Simple application that takes input from a database (textfile) and matches strings of characters on input.
