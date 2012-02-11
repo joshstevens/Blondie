@@ -1,7 +1,3 @@
-## Check for Git upload
-
-
-
 # Start of file	
 Shoes.app :title => "Address Book", :width => 800, :height => 600, :resizable => false do
 
