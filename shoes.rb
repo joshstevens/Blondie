@@ -18,9 +18,9 @@ unless auth_file.include? "0"
 					# alert this
 			else 
 					alert "Sorry, wrong code. Try opening it up again and re-entering it. If that doesn't work, send Josh a message!"
-						exit()
+					exit()
+			end
 	end
-end
 
 ### Start of buttons ###
 	
@@ -31,19 +31,63 @@ stack :height => 599, :width => 140 do
 border red
 	flow do # topButtonFlow
 			button 'About' do 
-				window :title => "About Page", :width => 500, :height => 500, :resizable => false do
+				window :title => "About Page", :width => 500, :height => 600, :resizable => false do
 					# set size of About window
 					stack :width => 480 do
 					# set size of stack (vertical)
-					title "About!"
-						para ABOUT_PAGE
-				end # stack width
-			
-			end # stack
-		end		
-		
+					
+					stack :height => 30 do
+						flow :width => 284 do
+					end
+						border red
+						caption "-- What is Blondie? --"
+					end
+				
+					stack :height => 100 do	
+						border red
+						inscription INTRO	
+					end 
+					
+					stack :height => 30 do
+						flow :width => 284 do
+					end
+						border red
+						caption "-- What works? --"
+					end
+					
+					stack :height => 100 do	
+						border red
+						inscription WHAT_WORKS	
+					end 
+					
+					stack :height => 30 do
+							flow :width => 284 do
+					end
+							border red
+							caption "-- Yet to implement --"
+					end
+						
+					stack :height => 100 do	
+							border red
+							inscription YET_TO_IMPLEMENT	
+					end
+						
+					stack :height => 30 do
+								flow :width => 284 do
+					end
+							border red
+							caption "-- Why? --"
+					end
+							
+					stack :height => 100 do	
+							border red
+							inscription WHY
+				end
+			end
+	 end		
+end
 		button 'Help' do 
-			window :title => "New", :width => 500, :height => 500, :color => ghostwhite, :resizable => false do
+			window :title => "New", :width => 500, :height => 500, :resizable => false do
 				# set size of About window
 				stack :width => 480 do
 				# set size of stack (vertical)
