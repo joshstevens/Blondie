@@ -69,25 +69,32 @@ border red
 stack :height => 600, :width => 200 do
 	border red
 	para "Second"
-	button 'Something' do 
-				window :title => "New", :width => 500, :height => 500, :color => ghostwhite, :resizable => false do
-					# set size of About window
-					stack :width => 480 do
-					# set size of stack (vertical)
-					title "Something!"
-						para "Lorem ipsum dolor sit amet.." 
-				end # stack width
-					stack :width => -50 do
-					# this should make it go on the right
-						para "This is on the right!"
-					end # stack
-				end # stack
-			end
-		end
+#	button 'Something' do 
+#				window :title => "New", :width => 500, :height => 500, :color => ghostwhite, :resizable => false do
+#					# set size of About window
+#					stack :width => 480 do
+#					# set size of stack (vertical)
+#					title "Something!"
+#						para "Lorem ipsum dolor sit amet.." 
+#				end # stack width
+#					stack :width => -50 do
+#					# this should make it go on the right
+#						para "This is on the right!"
+##					end # stack
+#				end # stack
+#			end
+#		end
+	end
 end
+
+
 stack :height => 600, :width => 200 do
 	border red
 	para "Third"
+	flow :width => 199 do
+		border red
+		para "Tiny flow"
+	end
 end
 
 stack :height => 600, :width => 200 do
@@ -97,7 +104,19 @@ end
 
 stack :height => 600, :width => 200 do
 	border red
-	para "Fifth"
+		para "Fifth"
+			stack :height => 530 do
+				border red 
+				search_box = edit_line
+			end	
+	
+stack :height => 40 do
+	border red
+	button "Add" do
+		alert "Add something here.."
+	end		
+end
+
 end
 		
 end #main flow
