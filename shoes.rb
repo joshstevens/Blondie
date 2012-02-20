@@ -31,56 +31,40 @@ stack :height => 599, :width => 140 do
 border red
 	flow do # topButtonFlow
 			button 'About' do 
-				window :title => "About Page", :width => 500, :height => 600, :resizable => false do
+				window :title => "About Page", :width => 500, :height => 470, :resizable => false do
 					# set size of About window
 					stack :width => 480 do
 					# set size of stack (vertical)
 					
 					stack :height => 30 do
-						flow :width => 284 do
-					end
-						border red
-						caption "-- What is Blondie? --"
+						caption "What is Blondie?"
 					end
 				
-					stack :height => 100 do	
-						border red
+					stack :height => 80 do	
 						inscription INTRO	
 					end 
 					
 					stack :height => 30 do
-						flow :width => 284 do
-					end
-						border red
-						caption "-- What works? --"
+						caption "What works?"
 					end
 					
-					stack :height => 100 do	
-						border red
+					stack :height => 50 do	
 						inscription WHAT_WORKS	
 					end 
 					
 					stack :height => 30 do
-							flow :width => 284 do
-					end
-							border red
-							caption "-- Yet to implement --"
+							caption "Yet to implement"
 					end
 						
-					stack :height => 150, :scrollable => true do	
-							border red
+					stack :height => 120, :scrollable => true do	
 							inscription YET_TO_IMPLEMENT	
 					end
 						
 					stack :height => 30 do
-								flow :width => 284 do
-					end
-							border red
-							caption "-- Why? --"
+							caption "Why?"
 					end
 							
 					stack :height => 100 do	
-							border red
 							inscription WHY
 				end
 			end
@@ -162,7 +146,7 @@ end
 
 flow :width => 300 do
 	button "OK"
-	button "Cancel"
+	button "Cancel" 
 end	
 					
 				end
