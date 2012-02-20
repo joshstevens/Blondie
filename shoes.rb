@@ -1,5 +1,7 @@
 # Start of file	
 Shoes.app :title => ":: Blondie - Address Book v1.0 :: ", :width => 800, :height => 600, :resizable => false do
+background 'F4F4F4'
+#background 'wood.png' # Change me at some point
 
 # Files and arrays
 @file = File.open '/Users/josh/Desktop/db.txt', 'rb'
@@ -29,6 +31,7 @@ flow :width => 800 do
 	
 stack :height => 599, :width => 140 do
 border red
+
 	flow do # topButtonFlow
 			button 'About' do 
 				window :title => "About Page", :width => 500, :height => 470, :resizable => false do
@@ -70,6 +73,7 @@ border red
 			end
 	 end		
 end
+
 		button 'Help' do 
 			window :title => "New", :width => 500, :height => 500, :resizable => false do
 				# set size of About window
@@ -112,10 +116,10 @@ flow :height => 600, :width => 160 do
 end
 
 stack :height => 600, :width => 200 do
-	border red
-		para "Search here.."
-			stack :height => 530 do
-			border red
+border '889697'
+background '8896A1'
+	para "Search here.."
+	stack :height => 530 do
 
 search_box = edit_line :width => 187
 	flow :height => 50 do
@@ -126,7 +130,6 @@ end
 							
 							
 stack :height => 40 do
-	border red
 		button "Add new" do
 
 window :title => "Add New Number", :width => 300, :height => 130, :resizable => false do
@@ -140,15 +143,16 @@ end
 
 
 stack :width => 200 do			
-		add_name = edit_line # use me later
-		add_number = edit_line # use me later
+		new_name = edit_line # use me later
+		new_number = edit_line # use me later
+		new_line = "\n"
+		dash = " - "
 end
-
-flow :width => 300 do
+			
+flow do
 	button "OK"
-	button "Cancel" 
-end	
-					
+	button "Cancel"
+end
 				end
 			end	
 	 end
@@ -162,7 +166,6 @@ def search( file, query ) # need to define what the file is!
 	file.rewind
 		file.select {|line| line =~ /#{query}/i }.map {|match| match.chomp }
 end
-
 
 def display_all
 	@file.each do |file|
