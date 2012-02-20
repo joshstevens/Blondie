@@ -27,7 +27,7 @@ end
 flow :width => 800 do	
 ## Stack 1 ##
 	
-stack :height => 599, :width => 200 do
+stack :height => 599, :width => 140 do
 border red
 	flow do # topButtonFlow
 			button 'About' do 
@@ -61,37 +61,37 @@ border red
 			end
 		end
 	
-## End of Stack 1 ##
-
-## Stack 2 ##
-
-
-stack :height => 600, :width => 200 do
+flow :height => 600 do
 	border red
 	para "First"
-	
 	end
 end
 
 
-stack :height => 600, :width => 200 do
+flow :height => 600, :width => 300 do
 	border red
 	para "Second"
-
-
+	stack :height => 40 do
+		border red
+		para "Results"
+	end
 end
 
-flow :height => 600, :width => 200 do
+flow :height => 600, :width => 160 do
 	border red
 	para "Third"
+	stack :height => 40 do
+		border red
+		para "Search term"
+	end
 end
 
 stack :height => 600, :width => 200 do
 	border red
 		para "Search here.."
 			stack :height => 530 do
-				border red 
-				search_box = edit_line
+				border red
+				search_box = edit_line :width => 187
 				flow :height => 50 do
 					button "Search"
 					button "Clear"
@@ -101,7 +101,7 @@ stack :height => 600, :width => 200 do
 	
 stack :height => 40 do
 	border red
-	button "Add" do
+	button "Add new" do
 		alert "Add something here.."
 	end	
 end
@@ -170,11 +170,6 @@ def set_authenticated
 		open('/Users/josh/Dropbox/ReWrittenBlondie/auth.txt', 'a')	{ |f| f.puts "1"}
 end
 
-
-def lorum_ipsum
-	para ""
-	
-end
 
 end
 # locate auth_file -> if auth_file.includes? "1" set authenticated to true
