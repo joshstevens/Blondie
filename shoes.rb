@@ -1,5 +1,5 @@
 # Start of file	
-Shoes.app :title => "Address Book", :width => 800, :height => 600, :resizable => false do
+Shoes.app :title => ":: Blondie - Address Book v1.0 :: ", :width => 800, :height => 600, :resizable => false do
 
 # Files and arrays
 @file = File.open '/Users/josh/Desktop/db.txt', 'rb'
@@ -67,7 +67,7 @@ border red
 							caption "-- Yet to implement --"
 					end
 						
-					stack :height => 100 do	
+					stack :height => 150, :scrollable => true do	
 							border red
 							inscription YET_TO_IMPLEMENT	
 					end
@@ -131,63 +131,46 @@ stack :height => 600, :width => 200 do
 	border red
 		para "Search here.."
 			stack :height => 530 do
-				border red
-				search_box = edit_line :width => 187
-				flow :height => 50 do
-					button "Search"
-					button "Clear"
-				end
-			end	
-	
-	
+			border red
+
+search_box = edit_line :width => 187
+	flow :height => 50 do
+			button "Search"
+			button "Clear"
+		end
+end	
+							
+							
 stack :height => 40 do
 	border red
-	button "Add new" do
-		alert "Add something here.."
-	end	
+		button "Add new" do
+
+window :title => "Add New Number", :width => 300, :height => 130, :resizable => false do
+flow :height => 30 do 
+	caption "Insert details here"
 end
+	stack :width => 80 do
+			inscription "Name:"
+			inscription "Number:"
+	end
+
+
+stack :width => 200 do			
+		add_name = edit_line # use me later
+		add_number = edit_line # use me later
+end
+
+flow :width => 300 do
+	button "OK"
+	button "Cancel"
+end	
+					
+				end
+			end	
+	 end
 end
 		
 end #main flow
-
-		
-### End of Buttons ###
-
-### Start of main content ### 
-
-#stack :width => -150, :height => 400, :scroll => true do
-#	para "" # probably shouldn't be para's
-#	para ""
-#	
-#	para "Lorem ipsum dolor sit amet, consectetur adipiscing elit.."
-#		flow do
-#				input = edit_line
-#				
-#				
-#button "Search" do
-#	matches = search( @file, input.text )
-#		@output.clear
-#		@output.append do
-#			matches.empty? 
-#				para( NOTHING_FOUND, :font => "Gill Sans MT", :stroke => '#ffffff', :size => 10 ) :  
-#				para( SCROLL, :font => "Gill Sans MT",  :stroke => '#ffffff', :size => 10 )
-#end
-#		matches.each do |match|
-#		@output.append { para match, SPACE, :font => "Gill Sans MT",  :stroke => '#ffffff', :size => 10 }
-#	end
-#end
-#		@output = stack( )
-
-#end # edit_line 
-	
-
-#end # stack
-
-### End of main content ###
- # Shoes.app
-### End of app ###
-
-
 
 ### Methods ###
 # Regexp for search
@@ -243,8 +226,6 @@ YET_TO_IMPLEMENT = "* A proper search function
 * Ability to send bug reports to Josh
 * Licensing codes (just for fun!)
 * This in YAML form!"
-
-
 
 WHY = "This was originally a project developed by myself to learn how to code with Ruby and the Shoes GUI toolkit. This is a rewrite from scratch just to learn more about coding with Ruby. This is the first time I've uploaded it to Github, and the code available here will change overtime. 
 
