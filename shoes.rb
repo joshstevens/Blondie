@@ -1,5 +1,5 @@
 # Start of file	
-Shoes.app :title => ":: Blondie - Address Book v1.0 :: ", :width => 800, :height => 600, :resizable => false do
+Shoes.app :title => ":: Hamlet - Address Book v0.1 :: ", :width => 800, :height => 600, :resizable => false do
 background 'F4F4F4'
 #background 'wood.png' # Change me at some point
 
@@ -151,7 +151,7 @@ end
 			
 flow do
 	button "OK"
-	button "Cancel"
+	button "Cancel "
 end
 				end
 			end	
@@ -192,12 +192,12 @@ end
 ### Constants ###
 
 #-- Blondie --
-#-- What is Blondie? --
+#-- What is Hamlet? --
 #-- What works --
 #-- What is to be implemented --
 #-- Why? --
 
-INTRO = "This is the README file for the 'Blondie Address Book' written by Josh Stevens.
+INTRO = "This is the README file for the 'Hamlet Address Book' written by Josh Stevens.
 
 By the way: the GUI hasn't been finished yet, in fact; I haven't started on the design of it yet!" 
 
