@@ -24,7 +24,7 @@ end
 
 ### Start of buttons ###
 	
-	
+flow :width => 800 do	
 ## Stack 1 ##
 	
 stack :height => 599, :width => 200 do
@@ -65,24 +65,10 @@ border red
 
 ## Stack 2 ##
 
-stack :height => 599, :width => 200 do
+
+stack :height => 600, :width => 200 do
 	border red
 	para "Second"
-
-end
-
-stack :height => 600, :width => 200 do
-	border red
-	para "Third"
-end
-stack :height => 600, :width => 200 do
-	border red
-	para "Fourth"
-end
-
-stack :height => 600, :width => 200 do
-	border red
-	
 	button 'Something' do 
 				window :title => "New", :width => 500, :height => 500, :color => ghostwhite, :resizable => false do
 					# set size of About window
@@ -98,11 +84,23 @@ stack :height => 600, :width => 200 do
 				end # stack
 			end
 		end
-
+end
+stack :height => 600, :width => 200 do
+	border red
+	para "Third"
 end
 
-		
+stack :height => 600, :width => 200 do
+	border red
+	para "Fourth"
+end
 
+stack :height => 600, :width => 200 do
+	border red
+	para "Fifth"
+end
+		
+end #main flow
 
 		
 ### End of Buttons ###
