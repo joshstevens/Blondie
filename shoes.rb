@@ -24,7 +24,10 @@ end
 
 ### Start of buttons ###
 	
-stack :height => 600, :width => 200 do
+	
+## Stack 1 ##
+	
+stack :height => 599, :width => 200 do
 border red
 	flow do # topButtonFlow
 			button 'About' do 
@@ -40,58 +43,68 @@ border red
 						para "This is on the right!"
 				end # stack
 			end # stack
-		end # button
-		
+		end		
 		
 		button 'Help' do 
-					window :title => "New", :width => 500, :height => 500, :color => ghostwhite, :resizable => false do
-						# set size of About window
-						stack :width => 480 do
-						# set size of stack (vertical)
-						title "Help!"
-							para "Lorem ipsum dolor sit amet.." 
-					end # stack width
-						stack :width => -50 do
-						# this should make it go on the right
-							para "This is on the right!"
-					end # stack
-				end # stack
-			end
-end # red stack
-
-stack :height => 600, :width => 200 do
-	border red
-end
-
-stack :height => 600, :width => 200 do
-	border red
-end
-stack :height => 600, :width => 200 do
-	border red
-end
-stack :height => 600, :width => 200 do
-	border red
-end
-
-		
-
-
-	button 'Something' do 
 			window :title => "New", :width => 500, :height => 500, :color => ghostwhite, :resizable => false do
 				# set size of About window
 				stack :width => 480 do
 				# set size of stack (vertical)
-				title "Something!"
+				title "Help!"
 					para "Lorem ipsum dolor sit amet.." 
-			end # stack width
-				stack :width => -50 do
-				# this should make it go on the right
-					para "This is on the right!"
+				end # stack width
+					stack :width => -50 do
+					# this should make it go on the right
+						para "This is on the right!"
+					end # stack
 				end # stack
-			end # stack
+			end
 		end
-	end
 	
+## End of Stack 1 ##
+
+## Stack 2 ##
+
+stack :height => 599, :width => 200 do
+	border red
+	para "Second"
+
+end
+
+stack :height => 600, :width => 200 do
+	border red
+	para "Third"
+end
+stack :height => 600, :width => 200 do
+	border red
+	para "Fourth"
+end
+
+stack :height => 600, :width => 200 do
+	border red
+	
+	button 'Something' do 
+				window :title => "New", :width => 500, :height => 500, :color => ghostwhite, :resizable => false do
+					# set size of About window
+					stack :width => 480 do
+					# set size of stack (vertical)
+					title "Something!"
+						para "Lorem ipsum dolor sit amet.." 
+				end # stack width
+					stack :width => -50 do
+					# this should make it go on the right
+						para "This is on the right!"
+					end # stack
+				end # stack
+			end
+		end
+
+end
+
+		
+
+
+		
 ### End of Buttons ###
 
 ### Start of main content ### 
