@@ -31,17 +31,14 @@ stack :height => 599, :width => 140 do
 border red
 	flow do # topButtonFlow
 			button 'About' do 
-				window :title => "New", :width => 500, :height => 500, :color => ghostwhite, :resizable => false do
+				window :title => "About Page", :width => 500, :height => 500, :resizable => false do
 					# set size of About window
 					stack :width => 480 do
 					# set size of stack (vertical)
 					title "About!"
-						para "Lorem ipsum dolor sit amet.." 
+						para ABOUT_PAGE
 				end # stack width
-					stack :width => -50 do
-					# this should make it go on the right
-						para "This is on the right!"
-				end # stack
+			
 			end # stack
 		end		
 		
@@ -177,5 +174,38 @@ end
 #	
 ### Files ###
 
+
+### Constants ###
+
+#-- Blondie --
+#-- What is Blondie? --
+#-- What works --
+#-- What is to be implemented --
+#-- Why? --
+
+INTRO = "This is the README file for the 'Blondie Address Book' written by Josh Stevens.
+
+By the way: the GUI hasn't been finished yet, in fact; I haven't started on the design of it yet!" 
+
+WHAT_IS_DESCRIPTION = "* Simple application that takes input from a database (textfile) and matches strings of characters on input.
+"
+
+WHAT_WORKS = "* GUI
+* The code runs!"
+
+YET_TO_IMPLEMENT = "* A proper search function
+* Ability to add names and numbers to the database
+* Additional windows for help documentation
+* Ability to send bug reports to Josh
+* Licensing codes (just for fun!)
+* This in YAML form!"
+
+
+
+WHY = "This was originally a project developed by myself to learn how to code with Ruby and the Shoes GUI toolkit. This is a rewrite from scratch just to learn more about coding with Ruby. This is the first time I've uploaded it to Github, and the code available here will change overtime. 
+
+The original GitGist can be found here - https://gist.github.com/1418007
+
+(The above is awfully coded, just a learning process!)"
 
 	
