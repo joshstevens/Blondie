@@ -68,55 +68,43 @@ border red
 
 stack :height => 600, :width => 200 do
 	border red
-	para "Second"
-#	button 'Something' do 
-#				window :title => "New", :width => 500, :height => 500, :color => ghostwhite, :resizable => false do
-#					# set size of About window
-#					stack :width => 480 do
-#					# set size of stack (vertical)
-#					title "Something!"
-#						para "Lorem ipsum dolor sit amet.." 
-#				end # stack width
-#					stack :width => -50 do
-#					# this should make it go on the right
-#						para "This is on the right!"
-##					end # stack
-#				end # stack
-#			end
-#		end
+	para "First"
+	
 	end
 end
 
 
 stack :height => 600, :width => 200 do
+	border red
+	para "Second"
+
+
+end
+
+flow :height => 600, :width => 200 do
 	border red
 	para "Third"
-	flow :width => 199 do
-		border red
-		para "Tiny flow"
-	end
 end
 
 stack :height => 600, :width => 200 do
 	border red
-	para "Fourth"
-end
-
-stack :height => 600, :width => 200 do
-	border red
-		para "Fifth"
+		para "Search here.."
 			stack :height => 530 do
 				border red 
 				search_box = edit_line
+				flow :height => 50 do
+					button "Search"
+					button "Clear"
+				end
 			end	
+	
 	
 stack :height => 40 do
 	border red
 	button "Add" do
 		alert "Add something here.."
-	end		
+	end	
 end
-
 end
 		
 end #main flow
@@ -183,7 +171,8 @@ def set_authenticated
 end
 
 
-def something
+def lorum_ipsum
+	para ""
 	
 end
 
