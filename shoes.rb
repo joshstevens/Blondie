@@ -22,38 +22,59 @@ unless auth_file.include? "0"
 	end
 end
 
-	### Start of buttons ###
+### Start of buttons ###
 	
+stack :height => 600, :width => 200 do
+border red
 	flow do # topButtonFlow
-		button 'About' do 
-			window :title => "New", :width => 500, :height => 500, :color => ghostwhite, :resizable => false do
-				# set size of About window
-				stack :width => 480 do
-				# set size of stack (vertical)
-				title "About!"
-					para "Lorem ipsum dolor sit amet.." 
-			end # stack width
-				stack :width => -50 do
-				# this should make it go on the right
-					para "This is on the right!"
+			button 'About' do 
+				window :title => "New", :width => 500, :height => 500, :color => ghostwhite, :resizable => false do
+					# set size of About window
+					stack :width => 480 do
+					# set size of stack (vertical)
+					title "About!"
+						para "Lorem ipsum dolor sit amet.." 
+				end # stack width
+					stack :width => -50 do
+					# this should make it go on the right
+						para "This is on the right!"
+				end # stack
 			end # stack
-		end # stack
-	end # button
-	
-	button 'Help' do 
-			window :title => "New", :width => 500, :height => 500, :color => ghostwhite, :resizable => false do
-				# set size of About window
-				stack :width => 480 do
-				# set size of stack (vertical)
-				title "Help!"
-					para "Lorem ipsum dolor sit amet.." 
-			end # stack width
-				stack :width => -50 do
-				# this should make it go on the right
-					para "This is on the right!"
-			end # stack
-		end # stack
-	end
+		end # button
+		
+		
+		button 'Help' do 
+					window :title => "New", :width => 500, :height => 500, :color => ghostwhite, :resizable => false do
+						# set size of About window
+						stack :width => 480 do
+						# set size of stack (vertical)
+						title "Help!"
+							para "Lorem ipsum dolor sit amet.." 
+					end # stack width
+						stack :width => -50 do
+						# this should make it go on the right
+							para "This is on the right!"
+					end # stack
+				end # stack
+			end
+end # red stack
+
+stack :height => 600, :width => 200 do
+	border red
+end
+
+stack :height => 600, :width => 200 do
+	border red
+end
+stack :height => 600, :width => 200 do
+	border red
+end
+stack :height => 600, :width => 200 do
+	border red
+end
+
+		
+
 
 	button 'Something' do 
 			window :title => "New", :width => 500, :height => 500, :color => ghostwhite, :resizable => false do
@@ -75,41 +96,33 @@ end
 
 ### Start of main content ### 
 
-stack :width => 150 do
-	
-	#title 'Layout'
-	button "One"
-	para "Two"
-	para "Three"
-end # stack
+#stack :width => -150, :height => 400, :scroll => true do
+#	para "" # probably shouldn't be para's
+#	para ""
+#	
+#	para "Lorem ipsum dolor sit amet, consectetur adipiscing elit.."
+#		flow do
+#				input = edit_line
+#				
+#				
+#button "Search" do
+#	matches = search( @file, input.text )
+#		@output.clear
+#		@output.append do
+#			matches.empty? 
+#				para( NOTHING_FOUND, :font => "Gill Sans MT", :stroke => '#ffffff', :size => 10 ) :  
+#				para( SCROLL, :font => "Gill Sans MT",  :stroke => '#ffffff', :size => 10 )
+#end
+#		matches.each do |match|
+#		@output.append { para match, SPACE, :font => "Gill Sans MT",  :stroke => '#ffffff', :size => 10 }
+#	end
+#end
+#		@output = stack( )
 
-stack :width => -150, :height => 400, :scroll => true do
-	para "" # probably shouldn't be para's
-	para ""
-	
-	para "Lorem ipsum dolor sit amet, consectetur adipiscing elit.."
-		flow do
-				input = edit_line
-				
-				
-button "Search" do
-	matches = search( @file, input.text )
-		@output.clear
-		@output.append do
-			matches.empty? ?
-				para( NOTHING_FOUND, :font => "Gill Sans MT", :stroke => '#ffffff', :size => 10 ) :  
-				para( SCROLL, :font => "Gill Sans MT",  :stroke => '#ffffff', :size => 10 )
-end
-		matches.each do |match|
-		@output.append { para match, SPACE, :font => "Gill Sans MT",  :stroke => '#ffffff', :size => 10 }
-	end
-end
-		@output = stack( )
-
-end # edit_line 
+#end # edit_line 
 	
 
-end # stack
+#end # stack
 
 ### End of main content ###
  # Shoes.app
@@ -140,7 +153,9 @@ def set_authenticated
 end
 
 
-
+def something
+	
+end
 
 end
 # locate auth_file -> if auth_file.includes? "1" set authenticated to true
