@@ -40,7 +40,7 @@ border red
 					# set size of stack (vertical)
 					
 					stack :height => 30 do
-						caption "What is Blondie?"
+						caption "What is Hamlet?"
 					end
 				
 					stack :height => 80 do	
